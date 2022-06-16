@@ -27,10 +27,6 @@ const App = (props) => {
     setContador(0);
   };
 
-  const handleCliclkMagic = () => {
-    setContador(contador * 3 + (contador + 1));
-  };
-
   const isEven = contador % 2 === 0;
   const mensajePar = isEven ? "Es par" : "Es impar";
 
@@ -42,7 +38,6 @@ const App = (props) => {
       <button onClick={handleCliclk}>Incrementar</button>
       <button onClick={handleCliclkDescrease}>Decrementar</button>
       <button onClick={handleCliclkReset}>Reset</button>
-      <button onClick={handleCliclkMagic}>Magic</button>
     </div>
   );
 };
