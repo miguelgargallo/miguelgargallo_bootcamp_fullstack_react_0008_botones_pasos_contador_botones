@@ -3,20 +3,20 @@ import { useState } from "react";
 
 const rootElement = document.getElementById("root");
 
-const App = (props) => {
-  /* line 8 == lines 11-13 */
-  const [contador, setContador] = useState(13);
+const Counter = (props) => {
+  return <h1>{props.contador}</h1>;
+};
 
-  /*
-  const contador = useState(13);
-  const contadorValue = contador[0];
-  const setContador = contador[1];
-*/
+const App = (props) => {
+  const [contador, setContador] = useState(0);
 
   console.log("render");
 
   const handleCliclk = () => {
-    setContador(contador + 1);
+    // set contador(contador + 1);
+    setContador((prevContador) => {
+      return prevContador + 1;
+    });
   };
 
   const handleCliclkReset = () => {
@@ -29,7 +29,7 @@ const App = (props) => {
   return (
     <div>
       <p>El valor del contador es</p>
-      <h1>{contador}</h1>
+      <Counter contador={contador} />
       <p>{mensajePar}</p>
       <button onClick={handleCliclk}>Incrementar</button>
       <button onClick={handleCliclkReset}>Reset</button>
