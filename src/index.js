@@ -19,10 +19,6 @@ const App = (props) => {
     setContador(contador + 1);
   };
 
-  const handleCliclkDescrease = () => {
-    setContador(contador - 1);
-  };
-
   const handleCliclkReset = () => {
     setContador(0);
   };
@@ -36,7 +32,6 @@ const App = (props) => {
       <h1>{contador}</h1>
       <p>{mensajePar}</p>
       <button onClick={handleCliclk}>Incrementar</button>
-      <button onClick={handleCliclkDescrease}>Decrementar</button>
       <button onClick={handleCliclkReset}>Reset</button>
     </div>
   );
