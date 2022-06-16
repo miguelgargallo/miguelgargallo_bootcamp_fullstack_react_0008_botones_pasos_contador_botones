@@ -21,7 +21,7 @@ const App = (props) => {
   };
 
   const handleCliclkReset = () => {
-    setContador(2);
+    setContador(0);
   };
 
   const isEven = contador % 2 === 0;
@@ -30,7 +30,7 @@ const App = (props) => {
   return (
     <div>
       <p>El valor del contador es</p>
-      <Counter number={contador} />
+      <Counter number={2} />
       <p>{mensajePar}</p>
       <button onClick={handleCliclk}>Incrementar</button>
       <button onClick={handleCliclkReset}>Reset</button>
