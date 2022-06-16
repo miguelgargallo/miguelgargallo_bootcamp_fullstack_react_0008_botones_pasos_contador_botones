@@ -3,9 +3,9 @@ import { useState } from "react";
 
 const rootElement = document.getElementById("root");
 
-const Counter = (props) => {
+const Counter = ({ number }) => {
   console.log("Counter render");
-  return <h1>{props.number}</h1>;
+  return <h1>{number}</h1>;
 };
 
 const App = (props) => {
@@ -30,7 +30,7 @@ const App = (props) => {
   return (
     <div>
       <p>El valor del contador es</p>
-      <Counter number={2} />
+      <Counter number={contador} />
       <p>{mensajePar}</p>
       <button onClick={handleCliclk}>Incrementar</button>
       <button onClick={handleCliclkReset}>Reset</button>
