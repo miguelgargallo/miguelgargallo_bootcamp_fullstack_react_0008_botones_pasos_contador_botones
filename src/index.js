@@ -4,7 +4,8 @@ import { useState } from "react";
 const rootElement = document.getElementById("root");
 
 const Counter = (props) => {
-  return <h1>{props.contador}</h1>;
+  console.log("Counter render");
+  return <h1>{props.number}</h1>;
 };
 
 const App = (props) => {
@@ -20,7 +21,7 @@ const App = (props) => {
   };
 
   const handleCliclkReset = () => {
-    setContador(0);
+    setContador(2);
   };
 
   const isEven = contador % 2 === 0;
@@ -29,7 +30,7 @@ const App = (props) => {
   return (
     <div>
       <p>El valor del contador es</p>
-      <Counter contador={contador} />
+      <Counter number={contador} />
       <p>{mensajePar}</p>
       <button onClick={handleCliclk}>Incrementar</button>
       <button onClick={handleCliclkReset}>Reset</button>
