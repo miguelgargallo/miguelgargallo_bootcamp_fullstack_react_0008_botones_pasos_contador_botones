@@ -1,2 +1,2 @@
-# nuevos_pasos_contador_botones
+# ejercicio_clase_contador_mejorado_bootcamp
 Created with CodeSandbox
